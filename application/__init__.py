@@ -14,10 +14,12 @@ sns.set_style("darkgrid")
 #from surprise.model_selection import cross_validate, KFold
 from model import Pearson_Model
 
+
 app = Flask(__name__)
 
+
 loaded_p_model = pickle.load(open("C:/Users/Yelena/Desktop/p_model.sav", 'rb'))
-loaded_p_model.recommend("The Lion King: Special Edition", 10)
+
 
 #create api
 @app.route('/api/', methods=['GET', 'POST'])
